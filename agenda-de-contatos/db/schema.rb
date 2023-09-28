@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_28_182256) do
     t.string "number"
     t.string "email"
     t.string "adress"
+    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -5,6 +5,7 @@ class CreateAgendas < ActiveRecord::Migration[7.0]
       t.string :number
       t.string :email
       t.string :adress
+      t.string :icon
 
       t.timestamps
     end
