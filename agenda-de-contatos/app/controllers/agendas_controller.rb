@@ -25,7 +25,7 @@ class AgendasController < ApplicationController
 
     respond_to do |format|
       if @agenda.save
-        format.html { redirect_to agenda_url(@agenda), notice: "Agenda was successfully created." }
+        format.html { redirect_to agenda_url(@agenda), notice: "Agenda criada com sucesso." }
         format.json { render :show, status: :created, location: @agenda }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class AgendasController < ApplicationController
   def update
     respond_to do |format|
       if @agenda.update(agenda_params)
-        format.html { redirect_to agenda_url(@agenda), notice: "Agenda was successfully updated." }
+        format.html { redirect_to agenda_url(@agenda), notice: "Agenda alterada com sucesso." }
         format.json { render :show, status: :ok, location: @agenda }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class AgendasController < ApplicationController
     @agenda.destroy
 
     respond_to do |format|
-      format.html { redirect_to agendas_url, notice: "Agenda was successfully destroyed." }
+      format.html { redirect_to agendas_url, notice: "Agenda deletada com sucesso! " }
       format.json { head :no_content }
     end
   end
@@ -65,6 +65,6 @@ class AgendasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def agenda_params
-      params.require(:agenda).permit(:title, :number)
+      params.require(:agenda).permit(:name, :number, :email, :adress)
     end
 end
