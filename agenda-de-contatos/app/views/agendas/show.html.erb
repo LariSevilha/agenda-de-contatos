@@ -3,8 +3,8 @@
 <%= render @agenda %>
 
 <div>
-  <%= link_to "Edit this agenda", edit_agenda_path(@agenda) %> |
-  <%= link_to "Back to agendas", agendas_path %>
+  <%= link_to "Editar agenda", edit_agenda_path(@agenda) %> |
+  <%= link_to "Voltar", agendas_path %>
 
-  <%= button_to "Destroy this agenda", @agenda, method: :delete %>
+  <%= button_to "Excluir contato", @agenda, method: :delete %>
 </div>
